@@ -3,11 +3,12 @@
 Whitepages-Python allows you to query Address and Phone Numbers
 
 ## Installation
+Place file into project dir.
 
-
-
+In order for the script to run you must have BS4 and cloudscraper
 ```bash
-pip install git+URL
+pip install bs4
+pip install cloudscraper
 ```
 
 ## Usage
