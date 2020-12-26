@@ -58,3 +58,20 @@ class WhitePages: # Create a class
 				numbers = x.getText() + numbers
 		return numbers.replace("\n", " ")
 
+	def GetRelatives(self):
+		info_url = self.scraper.get(self.url).text
+		info_soup = BeautifulSoup(info_url, 'html.parser')
+		info_script = info_soup.findAll('a', {"class":"raven--text text-decoration-none name mb-0"})
+		realtives = ""
+		for x in info_script:
+			realtives = x.getText() + realtives
+		return realtives.replace("\n", ":")
+
+
+
+
+
+
+
+
+
