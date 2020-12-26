@@ -64,8 +64,8 @@ class WhitePages: # Create a class
 		info_script = info_soup.findAll('a', {"class":"raven--text text-decoration-none name mb-0"})
 		realtives = ""
 		for x in info_script:
-			realtives = x.getText() + realtives
-		return realtives.replace("\n", ":")
+			realtives = realtives + x.getText() + ","
+		return realtives.replace("\n", " ")
 
 
 
